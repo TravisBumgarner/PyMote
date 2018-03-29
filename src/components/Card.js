@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 
-import { cardStyle } from "../theme";
+import { cardStyle } from '../theme';
 
 const Card = (props) => {
   const {
@@ -22,6 +22,8 @@ Card.propTypes = {
   children: PropTypes.any,
 };
 
+Card.defaultProps = {
+  children: '',
+};
+
 export default Card;
-
-

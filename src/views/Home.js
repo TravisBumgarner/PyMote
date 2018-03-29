@@ -5,35 +5,22 @@ import {
   Text,
 } from 'react-native';
 
-import { Card, CardItem, } from '../components';
+import { Card, CardItem, Header } from '../components';
 
 import { buttonStyle } from '../theme';
 
-import { Header } from '../components';
-
-type Props = {};
 export default class Home extends Component<Props> {
   render() {
     return (
       <View>
-        <Header text={'Test'}/>
-        <Button title={'Hi'} color={buttonStyle.color} onPress={() => alert('hi')}/>
+        <Header text="Test" />
         <Card>
           <CardItem>
             <Text>Hi</Text>
           </CardItem>
 
         </Card>
-        <Card>
-          <CardItem>
-            <Text>Hi</Text>
-          </CardItem>
-
-          <CardItem>
-            <Text>Hi</Text>
-          </CardItem>
-
-        </Card>
+        <Button title={'Add Device'} color={buttonStyle.color} onPress={this.create} />
       </View>
     );
   }

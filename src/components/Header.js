@@ -1,26 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Text,
   View,
 } from 'react-native';
 
-type Props = {};
-export default class Header extends Component<Props> {
-  render() {
-    const {
-      text,
-    } = this.props;
+const Header = (props) => {
+  const {
+    text,
+  } = props;
 
-    return (
-      <View>
-        <Text>
-          { text }
-        </Text>
-      </View>
-    );
-  }
-}
+  return (
+    <View>
+      <Text>
+        { text }
+      </Text>
+    </View>
+  );
+};
 
 Header.propTypes = {
   text: PropTypes.string.isRequired,
