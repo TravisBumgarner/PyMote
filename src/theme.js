@@ -19,15 +19,19 @@ export const cardStyle = {
   elevation: 1,
   marginLeft: 5,
   marginRight: 5,
-  marginTop: 10
+  marginTop: 10,
 };
 
 export const cardItemStyle = {
-    borderBottomWidth: 1,
-    padding: 5,
-    backgroundColor: WHITE,
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    borderColor: LIGHT_GRAY,
-    position: 'relative'
+  borderBottomWidth: 1,
+  padding: 5,
+  backgroundColor: WHITE,
+  justifyContent: 'flex-start',
+  flexDirection: 'row',
+  borderColor: LIGHT_GRAY,
+  position: 'relative',
+};
+
+export const appStyle = {
+  flex: 1,
 };

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View,
+  ScrollView,
   Button,
   Text,
 } from 'react-native';
@@ -12,16 +12,17 @@ import { buttonStyle } from '../theme';
 export default class Home extends Component<Props> {
   render() {
     return (
-      <View>
+      <ScrollView>
         <Header text="Test" />
         <Card>
           <CardItem>
-            <Text>Hi</Text>
+            <Text>
+              Hi
+            </Text>
           </CardItem>
-
         </Card>
-        <Button title={'Add Device'} color={buttonStyle.color} onPress={this.create} />
-      </View>
+        <Button title="Add Device" color={buttonStyle.color} onPress={this.create} />
+      </ScrollView>
     );
   }
 }
