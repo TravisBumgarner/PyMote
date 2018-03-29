@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   TouchableOpacity,
@@ -7,38 +7,40 @@ import {
 
 import { COLORS } from '../theme';
 
-export const style = {
-  button: {
-    backgroundColor: COLORS.WHITE,
-    flex: 1,
-    alignSelf: 'stretch',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: COLORS.PRIMARY,
-    marginRight: 5,
-    marginLeft: 5,
-  },
+const style = {
   text: {
     alignSelf: 'center',
+    color: '#007aff',
+    fontSize: 16,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  button: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#007aff',
+    marginLeft: 5,
+    marginRight: 5,
   },
 };
 
-const Button = (props) => {
-  const {
-    text,
-  } = props;
-
+const Button = ({ onPress, children }) => {
   return (
-    <TouchableOpacity onPress={() => alert('hi')} style={style.button}>
+    <TouchableOpacity onPress={onPress} style={style.button}>
       <Text style={style.text}>
-        {text}sdd
+        {children}
       </Text>
     </TouchableOpacity>
   );
 };
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

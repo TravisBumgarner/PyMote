@@ -1,6 +1,7 @@
-import Home from './Home';
+import CreateUpdateDevice from './CreateUpdateDevice';
 
 export {
-  Home,
-}
+  CreateUpdateDevice,
+};
+
 

@@ -11,18 +11,19 @@ import {
   Button,
 } from '../components';
 
-import { buttonStyle } from '../theme';
+import {
+  CreateUpdateDevice
+} from '../containers';
 
 export default class Home extends Component<Props> {
+  handleOnPress = () => { alert('hi'); };
+
   render() {
     return (
       <ScrollView>
-        <Header text="Test" />
-        <Card>
-          <CardItem>
-            <Button text="SUPP" />
-          </CardItem>
-        </Card>
+        <Header text="Device Coniguration" />
+        <Button onPress={this.handleOnPress}>Add Device</Button>
+        <CreateUpdateDevice />
       </ScrollView>
     );
   }
