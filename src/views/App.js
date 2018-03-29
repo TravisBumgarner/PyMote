@@ -5,13 +5,17 @@ import {
 
 import { Home } from './_entry';
 
-import { appStyle } from '../theme';
+const style = {
+  app: {
+    flex: 1,
+  },
+};
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={appStyle}>
+      <View style={style.app}>
         <Home />
       </View>
     );
